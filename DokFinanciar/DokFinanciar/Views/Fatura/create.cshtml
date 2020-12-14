@@ -1,0 +1,56 @@
+﻿@model DokFinanciar.Models.Transaksione
+
+@{
+    ViewBag.Title = "create";
+}
+
+<h2>Krijo Fature</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Transaksione</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <label>Tipi i fatures</label>
+            <input type="text" value="Create" />
+        </div>
+        <div class="col-md-offset-2 col-md-10">
+            <label>Nga</label>
+            <input type="text" value="Create" />
+        </div>
+        <div class="col-md-offset-2 col-md-10">
+            <label>Ku</label>
+            <input type="text" value="Create" />
+        </div>
+        <div class="col-md-offset-2 col-md-10">
+            <label>Emertimi</label>
+            <input type="text" value="Create" />
+        </div>
+        <div class="col-md-offset-2 col-md-10">
+            <label>Sasia</label>
+            <input type="text" value="Create" />
+        </div>
+        <div class="col-md-offset-2 col-md-10">
+            <label>Cmimi</label>
+            <input type="text" value="Create" />
+        </div>
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
